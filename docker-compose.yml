@@ -4,7 +4,7 @@ services:
     image:alicelxq/docker-jenkins-dotnet-core：2.1.302
     #build: ./
     environment:
-      - JAVA_OPTS=-Dorg.apache.commons.jelly.tags.fmt.timeZone=Asia/Shanghai 
+      - JAVA_OPTS=-Dorg.apache.commons.jelly.tags.fmt.timeZone=Asia/Shenzhen
     ports:
       - 8180:8080
       - 50000:50000
@@ -13,7 +13,7 @@ services:
     restart: always
     volumes:
         # enable persistent volume (warning: make sure that the local jenkins_home folder is created)
-        - ./jenkins_home:/var/jenkins_home
+        - /var/jenkins_home:/var/jenkins_home
         # mount docker sock and binary for docker in docker (only works on linux)
         - ./run/docker.sock:/var/run/docker.sock
         - ./bin/docker:/usr/bin/docker
