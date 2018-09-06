@@ -1,7 +1,7 @@
 version: '2'
 services:
   jenkins-core:
-    image:alicelxq/docker-jenkins-dotnet-core：2.1.302
+    image:alicelxq/docker-jenkins-dotnet-core:2.1.302
     #build: ./
     environment:
       - JAVA_OPTS=-Dorg.apache.commons.jelly.tags.fmt.timeZone=Asia/Shenzhen
