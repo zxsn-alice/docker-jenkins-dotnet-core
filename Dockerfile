@@ -19,7 +19,7 @@ RUN sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft
 
 # Install the .NET Core framework
 RUN apt-get update
-RUN apt-get install -y dotnet-sdk-2.1
+RUN apt-get install -y dotnet-sdk-2.2
 
 # Switch back to the jenkins user.
 USER jenkins
